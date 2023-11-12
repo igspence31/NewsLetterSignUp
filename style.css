@@ -1,0 +1,170 @@
+/* COLORS */
+
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --pink: hsla(4, 85%, 66%, 0.859);
+    --fs-body: 1rem;
+    ---fw-regular: 400;
+    --fw-bold: 700;
+  }
+  
+  /* FONT */
+  @font-face {
+    font-family: roboto;
+    src: url("../fonts/Roboto-Regular.ttf");
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "roboto", sans-serif;
+    background: var(--Charcoal-Grey);
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  label,
+  .error-message {
+    font-size: 0.8rem;
+    font-weight: var(--fw-bold);
+    color: var(--Tomato);
+  }
+  
+  input {
+    border: 0.01rem solid var(--Grey);
+  }
+  
+  input:hover {
+    border: 0.01rem solid var(--Dark-Slate-Grey);
+  }
+  
+  button {
+    color: var(--White);
+    font-weight: var(--fw-bold);
+    background: var(--Dark-Slate-Grey);
+    border-radius: 100px;
+  }
+  
+  button:hover {
+    background: linear-gradient(var(--pink), var(--Tomato));
+  }
+  .card {
+    background: var(--White);
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    max-width: 700px;
+  }
+  .sign-up-card {
+    width: 700px;
+  }
+  .success-card {
+    flex-direction: column;
+    width: 500px;
+  }
+  
+  .section-content,
+  .email-field {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .email-field div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .list-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+  
+  .input-element {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    color: tomato;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .none {
+    display: none;
+  }
+  
+  .error-style {
+    background: rgba(255, 99, 71, 0.197);
+    border: 1px solid tomato;
+    color: tomato;
+  }
+  
+  input.error-style::placeholder {
+    color: var(--Tomato);
+  }
+  
+  .email-field_inner {
+    position: relative;
+  }
+  
+  @media screen and (max-width: 680px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .sign-up-card {
+      flex-direction: column-reverse;
+      padding: 0;
+      border-radius: 0;
+    }
+  
+    .section-illustration {
+      content: url("../images/illustration-sign-up-mobile.svg");
+    }
+  
+    .section-content {
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  .success-result h1{
+    padding: 20px;
+  }
+
+  .success-result p {
+    padding: 10px;
+    line-height: 125%;
+  }

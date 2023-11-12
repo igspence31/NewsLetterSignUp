@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+
+  <body>
+    <!-- Sign-up Form -->
+    <article class="sign-up-card card">
+      <section class="section section-content">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <!-- List items -->
+        <div>
+          <p class="list-item">
+            <span class="list-bullet">
+                <img src="./assets/images/icon-list.svg" alt="check icon" />
+            </span>
+            Product discovery and building what matters
+          </p>
+
+          <p class="list-item">
+            <span class="list-bullet"
+              ><img
+                src="./assets/images/icon-list.svg"
+                alt="check icon" /></span
+            >Measuring to ensure updates are a success
+          </p>
+
+          <p class="list-item">
+            <span class="list-bullet"
+              ><img
+                src="./assets/images/icon-list.svg"
+                alt="check icon" /></span
+            >And much more!
+          </p>
+        </div>
+
+        <!-- Area for user to input their email -->
+
+        <form action="" class="email-field">
+          <div class="email-field_inner">
+            <label for="email">Email address</label>
+            <p class="error-message"></p>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="email@company.com"
+              class="input-element"
+            />
+          </div>
+        
+
+          <!-- Button to subscribe -->
+
+          <a href="success.html">
+            <button type="submit" class="input-element submit-button">
+              Subscribe to monthly newsletter
+            </button>
+          </a>
+          
+         
+        </form>
+      </section>
+
+
+      <section class="section section-illustration">
+        <img
+          src="./assets/images/illustration-sign-up-desktop.svg"
+          alt="desktop illustration"
+        />
+      </section>
+
+      
+    </article>
+
+
+    <!-- Success Card -->
+    <article class="card success-card none">
+
+        <div>
+          <img src="./assets/images/icon-success.svg" alt="" />
+        </div>
+
+        <div class="success-result">
+            <h1>Thanks for Subscribing!</h1>
+
+            <p>
+                A confirmation email has been sent to
+                <span id="confirmation-email">confirmation-email</span> Please open it and click the button
+                inside to confirm your subscription.
+            </p>
+
+        </div>
+
+
+
+        <script>
+            // Retrieve user's email
+            const email = localStorage.getItem("email");
+            if(email) {
+                const emailSpan = document.getElementById("confirmation-email");
+                emailSpan.textContent = email;
+            }
+        </script>
+
+
+        <button type="button" class="button input-element dismiss-button">
+          Dismiss message
+        </button>
+      </article>
+
+    <script src="./script.js"></script>
+
+  </body>
+</html>
